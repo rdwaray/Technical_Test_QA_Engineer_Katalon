@@ -14,7 +14,7 @@ This project is created as part of **Venturo QA Automation Assignment**. It auto
 
 - **POST register successful**  
   - `/api/register`  
-  -  - Uses `email` from **GET single user** response with `id=2`.
+  -  Uses `email` from **GET single user** response with `id=2`.
 
 ## Global Variable
 
