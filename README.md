@@ -1,4 +1,4 @@
-#Assignment – Katalon WebService Automation for Reqres API
+# Assignment – Katalon WebService Automation for Reqres API
 
 This project is created as part of **Venturo QA Automation Assignment**. It automates WebService tests for **Reqres API** using **Katalon Studio** and has been uploaded to **GitHub**.
 ## Endpoints Automated
