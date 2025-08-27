@@ -1,0 +1,27 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API,,,,27-08-2025 13:29:36,27-08-2025 13:29:42,"6,275s",PASSED
+,,,,,,,
+Test Cases/API/TC_001 List User,,,,27-08-2025 13:29:37,27-08-2025 13:29:40,"3,185s",PASSED
+"response = sendRequest(findTestObject(""GET List Users""))",,,,27-08-2025 13:29:37,27-08-2025 13:29:40,"2,482s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,27-08-2025 13:29:40,27-08-2025 13:29:40,"0,035s",PASSED
+"verifyElementPropertyValue(response, ""data[0].email"", ""george.bluth@reqres.in"")",,,,27-08-2025 13:29:40,27-08-2025 13:29:40,"0,099s",PASSED
+,,,,,,,
+Test Cases/API/TC_002 Single User,,,,27-08-2025 13:29:40,27-08-2025 13:29:41,"0,489s",PASSED
+"response = sendRequest(findTestObject(""GET Single User""))",,,,27-08-2025 13:29:40,27-08-2025 13:29:41,"0,272s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,27-08-2025 13:29:41,27-08-2025 13:29:41,"0,004s",PASSED
+"verifyElementPropertyValue(response, ""data.first_name"", ""Janet"")",,,,27-08-2025 13:29:41,27-08-2025 13:29:41,"0,039s",PASSED
+,,,,,,,
+Test Cases/API/TC_003 Update User,,,,27-08-2025 13:29:41,27-08-2025 13:29:41,"0,714s",PASSED
+"response = sendRequest(findTestObject(""PUT Update User""))",,,,27-08-2025 13:29:41,27-08-2025 13:29:41,"0,520s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,27-08-2025 13:29:41,27-08-2025 13:29:41,"0,012s",PASSED
+"assert getElementPropertyValue(response, ""updatedAt"") != null",,,,27-08-2025 13:29:41,27-08-2025 13:29:41,"0,062s",PASSED
+,,,,,,,
+Test Cases/API/TC_004 Register User,,,,27-08-2025 13:29:41,27-08-2025 13:29:42,"1,048s",PASSED
+"response = sendRequest(findTestObject(""GET Single User""))",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,387s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,015s",PASSED
+"verifyElementPropertyValue(response, ""data.first_name"", ""Janet"")",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,049s",PASSED
+"email = getElementPropertyValue(response, ""data.email"")",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,042s",PASSED
+"println(""Email dari GET: "" + email)",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,012s",PASSED
+"postResponse = sendRequest(findTestObject(""POST Register"", [""email"":email, ""password"":""kopi""]))",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,308s",PASSED
+"verifyResponseStatusCode(postResponse, 200)",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,008s",PASSED
+"verifyElementPropertyValue(postResponse, ""id"", 2)",,,,27-08-2025 13:29:42,27-08-2025 13:29:42,"0,053s",PASSED

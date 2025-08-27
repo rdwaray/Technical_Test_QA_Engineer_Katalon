@@ -1,0 +1,45 @@
+2025-08-27 13:29:36.601 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API
+2025-08-27 13:29:36.738 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Ray Dimas Wirahadi Alaydrus
+2025-08-27 13:29:36.741 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Venturo_Assigment
+2025-08-27 13:29:36.742 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = Ray - DESKTOP-PHJQPES
+2025-08-27 13:29:36.745 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 10 64bit
+2025-08-27 13:29:36.747 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 172.16.0.2
+2025-08-27 13:29:36.749 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.2.2.0
+2025-08-27 13:29:37.403 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-08-27 13:29:37.404 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API/TC_001 List User
+2025-08-27 13:29:37.966 DEBUG testcase.TC_001 List User                - 1: response = sendRequest(findTestObject("GET List Users"))
+2025-08-27 13:29:40.326 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Ray\Katalon Studio\Venturo_Assigment\Reports\20250827_132929\API\20250827_132929\requests\main\GET-List-Users_0.har
+2025-08-27 13:29:40.448 DEBUG testcase.TC_001 List User                - 2: verifyResponseStatusCode(response, 200)
+2025-08-27 13:29:40.483 DEBUG testcase.TC_001 List User                - 3: verifyElementPropertyValue(response, "data[0].email", "george.bluth@reqres.in")
+2025-08-27 13:29:40.588 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API/TC_001 List User
+2025-08-27 13:29:40.616 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-08-27 13:29:40.619 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API/TC_002 Single User
+2025-08-27 13:29:40.788 DEBUG testcase.TC_002 Single User              - 1: response = sendRequest(findTestObject("GET Single User"))
+2025-08-27 13:29:41.055 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Ray\Katalon Studio\Venturo_Assigment\Reports\20250827_132929\API\20250827_132929\requests\main\GET-Single-User_1.har
+2025-08-27 13:29:41.060 DEBUG testcase.TC_002 Single User              - 2: verifyResponseStatusCode(response, 200)
+2025-08-27 13:29:41.065 DEBUG testcase.TC_002 Single User              - 3: verifyElementPropertyValue(response, "data.first_name", "Janet")
+2025-08-27 13:29:41.108 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API/TC_002 Single User
+2025-08-27 13:29:41.115 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-08-27 13:29:41.115 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API/TC_003 Update User
+2025-08-27 13:29:41.231 DEBUG testcase.TC_003 Update User              - 1: response = sendRequest(findTestObject("PUT Update User"))
+2025-08-27 13:29:41.732 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Ray\Katalon Studio\Venturo_Assigment\Reports\20250827_132929\API\20250827_132929\requests\main\PUT-Update-User_2.har
+2025-08-27 13:29:41.750 DEBUG testcase.TC_003 Update User              - 2: verifyResponseStatusCode(response, 200)
+2025-08-27 13:29:41.764 DEBUG testcase.TC_003 Update User              - 3: assert getElementPropertyValue(response, "updatedAt") != null
+2025-08-27 13:29:41.829 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API/TC_003 Update User
+2025-08-27 13:29:41.833 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-08-27 13:29:41.833 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/API/TC_004 Register User
+2025-08-27 13:29:42.002 DEBUG testcase.TC_004 Register User            - 1: response = sendRequest(findTestObject("GET Single User"))
+2025-08-27 13:29:42.381 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Ray\Katalon Studio\Venturo_Assigment\Reports\20250827_132929\API\20250827_132929\requests\main\GET-Single-User_3.har
+2025-08-27 13:29:42.390 DEBUG testcase.TC_004 Register User            - 2: verifyResponseStatusCode(response, 200)
+2025-08-27 13:29:42.405 DEBUG testcase.TC_004 Register User            - 3: verifyElementPropertyValue(response, "data.first_name", "Janet")
+2025-08-27 13:29:42.453 DEBUG testcase.TC_004 Register User            - 4: email = getElementPropertyValue(response, "data.email")
+2025-08-27 13:29:42.496 DEBUG testcase.TC_004 Register User            - 5: println("Email dari GET: " + email)
+Email dari GET: janet.weaver@reqres.in
+2025-08-27 13:29:42.508 DEBUG testcase.TC_004 Register User            - 6: postResponse = sendRequest(findTestObject("POST Register", ["email":email, "password":"kopi"]))
+2025-08-27 13:29:42.814 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Ray\Katalon Studio\Venturo_Assigment\Reports\20250827_132929\API\20250827_132929\requests\main\POST-Register_4.har
+2025-08-27 13:29:42.817 DEBUG testcase.TC_004 Register User            - 7: verifyResponseStatusCode(postResponse, 200)
+2025-08-27 13:29:42.826 DEBUG testcase.TC_004 Register User            - 8: verifyElementPropertyValue(postResponse, "id", 2)
+2025-08-27 13:29:42.881 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/API/TC_004 Register User
+2025-08-27 13:29:42.986 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-08-27 13:29:42.986 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API
+2025-08-27 13:29:42.986 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================
